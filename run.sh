@@ -41,7 +41,7 @@ if pacman -Qi yay > /dev/null 2>&1; then
   echo "[b] yay is already installed."
   echo
 else
-  if [ -d "yay" ]; then
+  if [ -d "$HOME/yay" ]; then
     rm -rf yay
   fi
 
