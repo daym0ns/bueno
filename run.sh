@@ -46,7 +46,7 @@ else
   fi
 
   logless sudo pacman -S --needed git base-devel go --noconfirm
-  cd ~; logless git clone https://aur.archlinux.org/yay.git
+  cd ~; logless git clone https://aur.archlinux.org/yay.git ~/yay
   cd yay
   logless makepkg -si
   cd ..
