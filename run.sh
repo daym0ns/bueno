@@ -59,6 +59,20 @@ echo "[b] installing WM dependencies."
 echo
 logless install_packages "${WM_PKGS[@]}"
 
+no_dm=false
+for arg in "$@"; do
+    if [ "$arg" = "--no-dm" ]; then
+      no_dm = true
+    fi
+done
+
+if [ "$no_dm" = false ]; then
+  echo "[b] installing display manager."
+  logless yay -S ly --noconfirm
+  logless sudo systemctl enable ly
+  echo
+fi
+
 echo "[b] installing zsh dependencies."
 echo
 logless install_packages "${ZSH_PKGS[@]}"
