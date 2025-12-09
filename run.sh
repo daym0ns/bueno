@@ -17,6 +17,7 @@ set -e
 source packages.conf
 source scripts.sh
 
+cd ~
 clear
 print_logo
 echo
