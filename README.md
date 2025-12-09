@@ -15,5 +15,6 @@ cd bueno
 ```
 The commands above assume you have a working internet connection and working sound drivers.
 Everything can be done with a minimal/xorg arch installation using the `archinstall` script.
+You can also use the `--no-dm` flag to avoid installing the display manager.
 
 Enjoy!
