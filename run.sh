@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
 print_logo() {
     cat << "EOF"
 
@@ -14,8 +16,8 @@ EOF
 
 set -e
 
-source packages.conf
-source scripts.sh
+source "$DIR/packages.conf"
+source "$DIR/scripts.sh"
 
 cd ~
 clear
@@ -58,7 +60,7 @@ fi
 
 echo "[b] installing WM dependencies."
 echo
-logless install_packages "${WM_PKGS[@]}"
+logless install_packages "${I3_PKGS[@]}"
 
 no_dm=false
 for arg in "$@"; do
@@ -93,4 +95,4 @@ logless install_packages "${DEV_PKGS[@]}"
 
 echo "[b] installing dotfiles."
 echo
-. dotfiles.sh
+. "$DIR/dotfiles.sh"

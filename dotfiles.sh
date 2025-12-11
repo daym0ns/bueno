@@ -1,4 +1,8 @@
-source scripts.sh
+#!/usr/bin/env bash
+
+DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
+source "$DIR/scripts.sh"
 
 echo "[b] checking for stow."
 echo
