@@ -65,11 +65,7 @@ logless install_packages "${I3_PKGS[@]}"
 echo "[b] installing zsh dependencies."
 echo
 logless install_packages "${ZSH_PKGS[@]}"
-
-# install oh-my-posh
-if [ ! -f "$HOME/.local/bin/oh-my-posh" ]; then
-  logless curl -s https://ohmyposh.dev/install.sh | bash -s
-fi
+logless . "$DIR/omp.sh"
 
 echo "[b] installing nvim dependencies."
 echo
