@@ -62,20 +62,6 @@ echo "[b] installing WM dependencies."
 echo
 logless install_packages "${I3_PKGS[@]}"
 
-no_dm=false
-for arg in "$@"; do
-    if [ "$arg" = "--no-dm" ]; then
-      no_dm = true
-    fi
-done
-
-if [ "$no_dm" = false ]; then
-  echo "[b] installing display manager."
-  logless yay -S ly --noconfirm
-  logless sudo systemctl enable ly
-  echo
-fi
-
 echo "[b] installing zsh dependencies."
 echo
 logless install_packages "${ZSH_PKGS[@]}"
@@ -95,4 +81,8 @@ logless install_packages "${DEV_PKGS[@]}"
 
 echo "[b] installing dotfiles."
 echo
-. "$DIR/dotfiles.sh"
+logless . "$DIR/dotfiles.sh"
+
+echo "[b] installing tpm"
+echo
+logless . "$DIR/install_tpm.sh"
