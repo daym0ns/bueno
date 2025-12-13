@@ -1,0 +1,10 @@
+{
+    "BraveRewardsDisabled": true,
+    "BraveWalletDisabled": true,
+    "BraveVPNDisabled": 1,
+    "BraveAIChatEnabled": false,
+    "NewTabPageLocation": "https://duckduckgo.com/?t",
+    "TorDisabled": true,
+    "PasswordManagerEnabled": false,
+    "DnsOverHttpsMode": "automatic"
+}

@@ -61,6 +61,7 @@ fi
 echo "[b] installing WM dependencies."
 echo
 logless install_packages "${I3_PKGS[@]}"
+logless . "$DIR/brave-setup.sh"
 
 echo "[b] installing zsh dependencies."
 echo
