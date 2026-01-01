@@ -18,7 +18,7 @@ fi
 if [ ! -d "$HOME/dotfiles" ]; then
   echo "[b] cloning dotfiles repo."
   echo
-  logless git clone --depth 1 https://github.com/daym0ns/dotfiles-old ~/dotfiles
+  logless git clone --depth 1 https://github.com/daym0ns/dotfiles-bueno ~/dotfiles
 else
   echo "[b] dotfiles repo already present."
   echo
